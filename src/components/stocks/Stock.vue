@@ -32,6 +32,7 @@ export default {
         quantity: this.stock.quantity
       };
       console.log(order);
+      this.$store.dispatch('buyStock', order);
       this.quantity = 0;
     }
   }
