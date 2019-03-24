@@ -4,21 +4,17 @@
   </div>
 </template>
 
-
 <script>
-import Stock from './Stock.vue';
+import Stock from "./Stock.vue";
+
 export default {
-  data() {
-    return {
-      stocks: [
-        {id: 1, name: 'BMW', price: 5},
-        {id: 2, name: 'Porche', price: 2},
-        {id: 3, name: 'Lamborghini', price: 9}
-      ]
-    }
-  },
   components: {
     appStock: Stock
+  },
+  computed: {
+    stocks() {
+      return this.$store.getters.stocks;
+    }
   }
-}
+};
 </script>
