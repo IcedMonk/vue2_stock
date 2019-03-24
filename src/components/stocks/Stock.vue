@@ -29,7 +29,7 @@ export default {
       const order = {
         stockId: this.stock.id,
         price: this.stock.price,
-        quantity: this.stock.quantity
+        quantity: this.quantity
       };
       console.log(order);
       this.quantity = 0;
